@@ -10,11 +10,11 @@ app.use(express.urlencoded({extended: false}));
 
 connection.sync({force: false})
 .then(() => { 
-    console.log('Base de datos sincronizada'); 
+    console.log('DataBase synchronized'); 
     app.listen(port, ()=>{
-        console.log("la aplicación corre en el puerto: " + port);
+        console.log("the application is running at the port: " + port);
     })
   })
   .catch((error) => {
-    console.error('Error al sincronizar la base de datos ' + error);
+    console.error('Mistake synchronizing the DataBase ' + error);
   }); 
