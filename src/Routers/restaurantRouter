@@ -1,0 +1,10 @@
+const express = require('express');
+const restaurantController = require('../Controllers/restaurantController');
+const router = express.Router();
+
+router.post('/createRestaurant',restaurantController.createRestaurant);
+router.get('/listrestaurant', restaurantController.listRestaurant);
+router.put('/updateRestaurant/:restaurantId',restaurantController.updateRestaurant);
+router.put('/disableRestaurant', restaurantController.disableRestaurant);
+
+module.exports = router;
