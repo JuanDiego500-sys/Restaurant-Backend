@@ -19,8 +19,8 @@ product.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    producPrice: {
-        type: DataTypes.FLOAT,
+    productPrice: {
+        type: DataTypes.INTEGER,
         allowNull: false
     }, 
     restaurantId:{
@@ -31,7 +31,7 @@ product.init({
     sequelize: connection,
     modelName: 'product',
     paranoid: true,
-    deleteAt: 'destroyTime'
+    deletedAt: 'destroyTime'
 });
 
 module.exports = product;

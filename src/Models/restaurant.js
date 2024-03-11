@@ -35,7 +35,7 @@ restaurant.init({
     sequelize: connection,
     modelName: 'restaurant',
     paranoid: true,
-    deleteAt: 'destroyTime'
+    deletedAt: 'destroyTime'
 });
 
 module.exports = restaurant;
