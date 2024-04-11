@@ -1,23 +1,23 @@
-const {Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const connection = require('../DataBase/connection');
 
-class city extends Model{}
+class city extends Model { }
 
 city.init({
-    cityId:{
+    cityId: {
         type: DataTypes.STRING,
         primaryKey: true,
         unique: true
     },
-    cityName:{
+    cityName: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    departmentId:{
+    departmentId: {
         type: DataTypes.STRING,
         allowNull: false
     }
-},{
+}, {
     sequelize: connection,
     modelName: 'city',
     paranoid: true,

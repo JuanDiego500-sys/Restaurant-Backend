@@ -1,10 +1,10 @@
-const {Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const connection = require('../DataBase/connection');
 
-class department extends Model{};
+class department extends Model { };
 
 department.init({
-    departmentId:{
+    departmentId: {
         type: DataTypes.STRING,
         primaryKey: true,
         unique: true
@@ -13,8 +13,8 @@ department.init({
         type: DataTypes.STRING,
         allowNull: false
     }
-},{
-    sequelize: connection, 
+}, {
+    sequelize: connection,
     modelName: 'department',
     paranoid: true,
     deleteAt: 'destroyTime'

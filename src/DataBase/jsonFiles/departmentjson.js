@@ -1,6 +1,6 @@
 const department = require('../../Models/department');
 
-function createDepartments(){
+function createDepartments() {
     department.bulkCreate(
         [
             {
@@ -147,5 +147,5 @@ function createDepartments(){
 }
 
 module.exports = {
-   createDepartments
+    createDepartments
 };

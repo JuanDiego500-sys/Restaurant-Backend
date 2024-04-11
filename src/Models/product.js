@@ -1,13 +1,13 @@
-const {Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const connection = require('../DataBase/connection');
 
-class product extends Model{
+class product extends Model {
 
 }
 
 product.init({
-    productId:{
-        type:DataTypes.INTEGER,
+    productId: {
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
@@ -22,12 +22,12 @@ product.init({
     productPrice: {
         type: DataTypes.INTEGER,
         allowNull: false
-    }, 
-    restaurantId:{
+    },
+    restaurantId: {
         type: DataTypes.INTEGER,
-        allowNull:false
+        allowNull: false
     }
-},{
+}, {
     sequelize: connection,
     modelName: 'product',
     paranoid: true,
